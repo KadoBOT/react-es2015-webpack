@@ -9,15 +9,11 @@ class CommentBox extends React.Component{
 	    this.state = { data: [] }
 	};
 
-	loadComments () {
+	componentDidMount () {
 	    fetch(this.props.url)
 	      .then(response => response.json())
 	      .then(data => this.setState({ data }))
 	      .catch(err => console.error(this.props.url, err.toString()))
-	};
-
-	componentDidMount () {
-	    this.loadComments()
 	};
 
 	render(){
