@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Comment = () => {
+const Comment = ({comment}) => {
 	return(
 		<div className="comment">
 			<h2 className="commentAuthor">
-				{this.props.author}
+				{comment.author}
 			</h2>
-			{this.props.children}
+			{comment.children}
 		</div>
 	);
 }
