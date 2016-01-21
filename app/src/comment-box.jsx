@@ -10,7 +10,17 @@ class CommentBox extends React.Component{
 	};
 
 	handleCommentSubmit(comment){
-		//TODO: submit to the server and refresh the list
+		fetch(this.props.url, {
+			method: 'post',
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(comment)
+		})
+		.then(response => response.json())
+		.then(data => this.setState({data}))
+		.catch(err => console.error(this.props.url, err.toString()))
 	};
 
 	loadComments () {
