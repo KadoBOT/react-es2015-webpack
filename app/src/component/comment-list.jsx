@@ -3,14 +3,9 @@ import Comment from './comment';
 
 const CommentList = (props) => {
 
-	const data = [
-	  {id: 1, author: "Pete Hunt", text: "This is one comment"},
-	  {id: 2, author: "Jordan Walke", text: "This is *another* comment"}
-	];
-
-	const commentNodes = data.map(comment => {
+	const commentNodes = props.data.map((comment, id) => {
 		return (
-			<Comment author={comment.author} key={comment.id}>
+			<Comment author={comment.author} key={id}>
 				{comment.text}
 			</Comment>
 		);
