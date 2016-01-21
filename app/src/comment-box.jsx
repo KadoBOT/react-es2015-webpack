@@ -16,6 +16,7 @@ class CommentBox extends React.Component{
 	      .catch(err => console.error(this.props.url, err.toString()))
 	};
 
+	//14
 	componentDidMount () {
 	    this.loadComments()
 	};
