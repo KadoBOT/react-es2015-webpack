@@ -6,7 +6,7 @@ const Comment = (props) => {
 			<h2 className="commentAuthor">
 				{props.author}
 			</h2>
-			{props.children}
+			{marked(props.children.toString())}
 		</div>
 	);
 }
