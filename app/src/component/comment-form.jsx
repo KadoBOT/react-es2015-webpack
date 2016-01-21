@@ -1,11 +1,9 @@
 import React from 'react';
-import Comment from './comment';
 
-const CommentForm = (props) => {
+const CommentForm = () => {
 	return(
 		<div className="commentForm">
-			<Comment author="Pete Hunt">This is one comment</Comment>
-			<Comment author="Jordan Walke">THis is *another* comment</Comment>
+			Hello, world! I am a CommentForm.
 		</div>
 	);
 }
