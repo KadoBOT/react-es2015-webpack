@@ -9,6 +9,10 @@ class CommentBox extends React.Component{
 	    this.state = { data: [] }
 	};
 
+	handleCommentSubmit(comment){
+		//TODO: submit to the server and refresh the list
+	};
+
 	loadComments () {
 	    fetch(this.props.url)
 	      .then(response => response.json())
@@ -26,7 +30,7 @@ class CommentBox extends React.Component{
 			<div className="commentBox">
 				<h1>Comments</h1>
 				<CommentList data={this.state.data} />
-				<CommentForm />
+				<CommentForm onCommentSubmit={this.handleCommentSubmit} />
 			</div>
 		);
 	}
