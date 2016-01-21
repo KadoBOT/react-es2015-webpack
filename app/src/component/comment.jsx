@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Comment = ({props}) => {
+const Comment = (props) => {
 	return(
 		<div className="comment">
 			<h2 className="commentAuthor">
