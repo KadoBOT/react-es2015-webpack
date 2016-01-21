@@ -10,6 +10,12 @@ class CommentBox extends React.Component{
 	};
 
 	handleCommentSubmit(comment){
+		let comments = this.state.data;
+		comment.id = Date.now();
+
+		let newComments = comments.concat([comment]);
+		this.setState({data: newComments});
+		
 		fetch(this.props.url, {
 			method: 'post',
 			headers: {
