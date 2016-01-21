@@ -1,12 +1,15 @@
 import React from 'react';
 
 const Comment = (props) => {
+
+	let rawMarkup = marked(props.children.toString(), {sanitize: true});
+	
 	return(
 		<div className="comment">
 			<h2 className="commentAuthor">
 				{props.author}
 			</h2>
-			{marked(props.children.toString())}
+			<span dangerouslySetInnerHTML={{__html: rawMarkup}} />
 		</div>
 	);
 }
