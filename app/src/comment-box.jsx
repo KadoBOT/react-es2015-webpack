@@ -9,3 +9,5 @@ class CommentBox extends React.Component{
 		);
 	}
 }
+
+export default CommentBox;
